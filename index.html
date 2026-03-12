@@ -7,13 +7,9 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#F8F4FF;color:#1A1A1A;min-height:100vh}
-:root{
-  --purple:#A100FF;--purple-dk:#6A0099;--purple-md:#CC66FF;--purple-lt:#F2E5FF;
-  --black:#000;--off-black:#1A1A1A;--gray:#666;--gray-lt:#E8E8E8;--white:#fff;--bg:#F8F4FF;
-  --coral:#E8533F;--gold:#F5A623;--teal:#00C4B3;--blue:#0070C0;--green:#3D8B37;--slate:#4A5568;
-}
+:root{--purple:#A100FF;--purple-dk:#6A0099;--purple-md:#CC66FF;--purple-lt:#F2E5FF;--black:#000;--off-black:#1A1A1A;--gray:#666;--gray-lt:#E8E8E8;--white:#fff;--bg:#F8F4FF;--coral:#E8533F;--gold:#F5A623;--teal:#00C4B3;--blue:#0070C0;--green:#3D8B37;--slate:#4A5568}
 .hdr-grad{background:linear-gradient(135deg,var(--purple),var(--purple-dk));padding:18px 28px 14px}
-.hdr-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12}
+.hdr-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .chevron{width:20px;height:20px;background:#fff;clip-path:polygon(0 0,100% 50%,0 100%);flex-shrink:0}
 .stat-box{text-align:center;background:rgba(255,255,255,.15);border-radius:8px;padding:8px 14px}
 .stat-val{font-size:20px;font-weight:900;color:#fff}
@@ -27,24 +23,23 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 .sl{font-size:10px;letter-spacing:2px;color:var(--gray);font-weight:700;margin-bottom:8px;text-transform:uppercase}
 .sn{font-size:11px;color:var(--gray);margin-bottom:12px}
 .tag{display:inline-block;border-radius:4px;padding:2px 8px;font-size:10px;font-weight:700}
-.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12}
-.gauto{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14}
-.bar-wrap{background:var(--gray-lt);border-radius:4px;height:4px;overflow:hidden}
-.proof-row{display:flex;gap:8;align-items:flex-start;padding:7px 10px;background:var(--bg);border-radius:6px;margin-bottom:6px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gauto{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.proof-row{display:flex;gap:8px;align-items:flex-start;padding:7px 10px;background:var(--bg);border-radius:6px;margin-bottom:6px}
 .proof-co{border-radius:4px;padding:2px 7px;font-size:10px;font-weight:700;white-space:nowrap;flex-shrink:0;color:#fff}
 .matrix{position:relative;height:300px;background:linear-gradient(135deg,#fff8f8,#f8f4ff 50%,#f0fff8);border-radius:10px;border:1px solid var(--gray-lt);overflow:hidden}
 .q-lbl{position:absolute;font-size:9px;color:#C0C0C0;font-weight:700;letter-spacing:.5px}
 .bubble{position:absolute;transform:translate(-50%,-50%);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;cursor:pointer;transition:transform .15s}
 .bubble:hover{transform:translate(-50%,-50%) scale(1.12)}
 .fact-card{cursor:pointer;border-radius:12px;overflow:hidden;min-height:210px;transition:box-shadow .2s;border:1px solid var(--gray-lt)}
-.footer{background:#1A1A1A;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8;margin-top:24px}
+.footer{background:#1A1A1A;padding:14px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-top:24px}
 .co-card{padding:7px 11px;min-width:120px;background:#fff;border-radius:12px;border:1px solid var(--gray-lt);border-top:2px solid var(--purple);text-decoration:none;display:block;transition:all .15s}
 .co-card:hover{box-shadow:0 4px 14px rgba(161,0,255,.2);transform:translateY(-2px)}
 .seg-card{background:#fff;border-radius:12px;border:1px solid var(--gray-lt);overflow:hidden;margin-bottom:16px}
-.seg-grid{display:grid;grid-template-columns:1fr 1fr;gap:16;padding:16px 20px}
+.seg-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px 20px}
 .watch-box{background:var(--bg);border-radius:8px;padding:10px 12px;margin-bottom:8px}
-.horizon-hdr{display:flex;align-items:center;gap:12;margin-bottom:14px;padding-bottom:10px}
+.horizon-hdr{display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:10px}
 .prov-card{background:#fff;border-radius:12px;padding:16px 18px;margin-bottom:12px;border:1px solid var(--gray-lt)}
 @keyframes pulse-hl{0%{box-shadow:0 0 0 0 rgba(161,0,255,.5)}70%{box-shadow:0 0 0 12px rgba(161,0,255,0)}100%{box-shadow:0 0 0 0 rgba(161,0,255,0)}}
 .card-hl{animation:pulse-hl .9s ease-out 2}
@@ -62,10 +57,7 @@ td{padding:8px 10px}
 <div class="hdr-grad">
   <div class="hdr-top">
     <div>
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-        <div class="chevron"></div>
-        <span style="font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.65);font-weight:600">ACCENTURE · INTELLIGENCE BRIEF</span>
-      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><div class="chevron"></div><span style="font-size:10px;letter-spacing:2.5px;color:rgba(255,255,255,.65);font-weight:600">ACCENTURE · INTELLIGENCE BRIEF</span></div>
       <h1 style="font-size:22px;font-weight:900;color:#fff;letter-spacing:-.5px">CAGNY 2026 — Executive Dashboard</h1>
       <p style="font-size:12px;color:rgba(255,255,255,.55);margin-top:4px">Feb 16–20 · Orlando · 31 Confirmed Presenters · C-Suite Playback</p>
     </div>
@@ -99,34 +91,61 @@ td{padding:8px 10px}
       <p style="color:rgba(255,255,255,.65);font-size:13px;line-height:1.75;max-width:600px">CAGNY 2026 marked a turning point. 31 companies arrived with one shared conviction: <strong style="color:#fff">disciplined execution beats ambitious reinvention.</strong> The era of "bet big on new" is over.</p>
     </div>
   </div>
+
+  <!-- Signal trio -->
   <div class="grid3" style="margin-bottom:14px">
     <div class="card" style="padding:14px 16px;border-top:4px solid var(--coral)"><div style="font-size:20px;margin-bottom:6px">⚡</div><div style="font-size:9px;color:var(--coral);font-weight:800;letter-spacing:1.5px;margin-bottom:3px">THE MACRO</div><div style="font-weight:800;font-size:13px;margin-bottom:5px">Consumer stress is structural</div><div style="font-size:12px;color:var(--gray);line-height:1.55">Value-seeking is not a cycle. Two consumer economies now exist inside every portfolio.</div></div>
     <div class="card" style="padding:14px 16px;border-top:4px solid var(--purple)"><div style="font-size:20px;margin-bottom:6px">🤖</div><div style="font-size:9px;color:var(--purple);font-weight:800;letter-spacing:1.5px;margin-bottom:3px">THE DIVIDER</div><div style="font-weight:800;font-size:13px;margin-bottom:5px">AI is splitting the field</div><div style="font-size:12px;color:var(--gray);line-height:1.55">Companies with AI-to-revenue proof points are compounding advantages others can't quantify.</div></div>
     <div class="card" style="padding:14px 16px;border-top:4px solid var(--gold)"><div style="font-size:20px;margin-bottom:6px">💊</div><div style="font-size:9px;color:var(--gold);font-weight:800;letter-spacing:1.5px;margin-bottom:3px">THE WILDCARD</div><div style="font-weight:800;font-size:13px;margin-bottom:5px">GLP-1 reshapes food AND beauty</div><div style="font-size:12px;color:var(--gray);line-height:1.55">A pharmaceutical side effect is becoming the biggest innovation brief across multiple CPG categories.</div></div>
   </div>
+
+  <!-- 6 themes -->
   <div class="card cp" style="margin-bottom:14px">
     <div class="sl">6 Universal Themes — Across All 31 Presentations</div>
     <div class="sn">% = share of 31 presenting companies that explicitly referenced this theme on stage or in Q&A</div>
     <div class="grid2" id="brief-themes"></div>
   </div>
+
+  <!-- Problems + stats -->
   <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:14px">
     <div class="card cp">
       <div class="sl">Top 3 Problems — Next 6–12 Months</div>
       <div id="brief-problems"></div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:10px">
-      <div class="card" style="padding:10px 14px;text-align:center;border-top:3px solid var(--purple);flex:1;display:flex;flex-direction:column;justify-content:center"><div style="font-size:22px;font-weight:900;color:var(--purple)">+9pts</div><div style="font-size:11px;color:var(--gray);margin-top:3px">AI promo lift — Conagra</div></div>
-      <div class="card" style="padding:10px 14px;text-align:center;border-top:3px solid var(--coral);flex:1;display:flex;flex-direction:column;justify-content:center"><div style="font-size:22px;font-weight:900;color:var(--coral)">$158B</div><div style="font-size:11px;color:var(--gray);margin-top:3px">GLP-1 market by 2035</div></div>
-      <div class="card" style="padding:10px 14px;text-align:center;border-top:3px solid var(--purple-dk);flex:1;display:flex;flex-direction:column;justify-content:center"><div style="font-size:22px;font-weight:900;color:var(--purple-dk)">$48.7B</div><div style="font-size:11px;color:var(--gray);margin-top:3px">KMB + Kenvue deal</div></div>
-      <div class="card" style="padding:10px 14px;text-align:center;border-top:3px solid var(--teal);flex:1;display:flex;flex-direction:column;justify-content:center"><div style="font-size:22px;font-weight:900;color:var(--teal)">102%</div><div style="font-size:11px;color:var(--gray);margin-top:3px">Alani Nu shelf space growth</div></div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="font-size:10px;letter-spacing:1.5px;color:var(--gray);font-weight:700;text-align:center;padding:4px 0">4 NUMBERS THAT DEFINED CAGNY 2026</div>
+      <div class="card" style="padding:10px 14px;border-top:3px solid var(--gold);flex:1;display:flex;gap:10px;align-items:center">
+        <div style="text-align:center;flex-shrink:0;min-width:48px"><div style="font-size:20px;font-weight:900;color:var(--gold);line-height:1">$1B</div></div>
+        <div><div style="font-size:11px;font-weight:800;color:#1A1A1A;margin-bottom:2px">Patience Pays</div><div style="font-size:10px;color:var(--gray);line-height:1.4">A frozen PB&J took 30 years to become a $1B brand. Your next winner may already be in the portfolio.</div></div>
+      </div>
+      <div class="card" style="padding:10px 14px;border-top:3px solid var(--purple-dk);flex:1;display:flex;gap:10px;align-items:center">
+        <div style="text-align:center;flex-shrink:0;min-width:48px"><div style="font-size:20px;font-weight:900;color:var(--purple-dk);line-height:1">$17B</div></div>
+        <div><div style="font-size:11px;font-weight:800;color:#1A1A1A;margin-bottom:2px">Self-Disruption at Scale</div><div style="font-size:10px;color:var(--gray);line-height:1.4">PMI earns $17B from smoke-free products — built to replace their own cigarettes. On purpose.</div></div>
+      </div>
+      <div class="card" style="padding:10px 14px;border-top:3px solid var(--purple);flex:1;display:flex;gap:10px;align-items:center">
+        <div style="text-align:center;flex-shrink:0;min-width:48px"><div style="font-size:20px;font-weight:900;color:var(--purple);line-height:1">$48.7B</div></div>
+        <div><div style="font-size:11px;font-weight:800;color:#1A1A1A;margin-bottom:2px">Category Redefinition</div><div style="font-size:10px;color:var(--gray);line-height:1.4">Kleenex is buying Tylenol & Band-Aid. The biggest HPC deal of the decade redraws the category map.</div></div>
+      </div>
+      <div class="card" style="padding:10px 14px;border-top:3px solid var(--coral);flex:1;display:flex;gap:10px;align-items:center">
+        <div style="text-align:center;flex-shrink:0;min-width:48px"><div style="font-size:20px;font-weight:900;color:var(--coral);line-height:1">9/11</div></div>
+        <div><div style="font-size:11px;font-weight:800;color:#1A1A1A;margin-bottom:2px">Leadership as Strategy</div><div style="font-size:10px;color:var(--gray);line-height:1.4">Unilever replaced 9 of 11 top leaders in 4 years and called it necessary — not instability.</div></div>
+      </div>
     </div>
   </div>
-  <div style="background:#1A1A1A;border-radius:12px;padding:18px 22px;color:#fff">
-    <div class="sl" style="color:#CC66FF">3 Questions Every CPG CEO Should Be Asking This Quarter</div>
-    <div class="grid3">
-      <div style="border-left:3px solid var(--purple);padding-left:12px"><div style="font-size:24px;font-weight:900;color:var(--purple);margin-bottom:4px">01</div><div style="font-size:12px;line-height:1.65;color:rgba(255,255,255,.65)">Where is AI generating measurable revenue in my business — and where is it still a presentation deck?</div></div>
-      <div style="border-left:3px solid var(--gold);padding-left:12px"><div style="font-size:24px;font-weight:900;color:var(--gold);margin-bottom:4px">02</div><div style="font-size:12px;line-height:1.65;color:rgba(255,255,255,.65)">Is my innovation pipeline built for the consumer who takes GLP-1s and wants protein-forward, portion-right products?</div></div>
-      <div style="border-left:3px solid var(--coral);padding-left:12px"><div style="font-size:24px;font-weight:900;color:var(--coral);margin-bottom:4px">03</div><div style="font-size:12px;line-height:1.65;color:rgba(255,255,255,.65)">When AI agents shop on behalf of consumers, is my brand structured to be found, selected, and fulfilled?</div></div>
+
+  <!-- Segment radar -->
+  <div class="card cp">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">
+      <div class="sl" style="margin:0">Segment Lens — Strategic Read by Category</div>
+      <span style="font-size:11px;color:var(--purple);font-weight:600">→ See Segment Lens tab for full analysis</span>
+    </div>
+    <div class="grid2">
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:9px 12px;background:var(--bg);border-radius:8px;border-left:3px solid var(--blue)"><span style="font-size:15px;flex-shrink:0">🍎</span><div><div style="font-weight:700;font-size:12px">Food & Beverage</div><div style="font-size:11px;color:var(--gray);line-height:1.45;margin-top:2px">Volume recovery race — pricing is off the table, execution precision is the only lever left</div></div></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:9px 12px;background:var(--bg);border-radius:8px;border-left:3px solid var(--gold)"><span style="font-size:15px;flex-shrink:0">🥨</span><div><div style="font-weight:700;font-size:12px">Snacks</div><div style="font-size:11px;color:var(--gray);line-height:1.45;margin-top:2px">National scale vs. regional soul — the unresolved tension splitting the segment</div></div></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:9px 12px;background:var(--bg);border-radius:8px;border-left:3px solid var(--teal)"><span style="font-size:15px;flex-shrink:0">🥤</span><div><div style="font-weight:700;font-size:12px">Beverages</div><div style="font-size:11px;color:var(--gray);line-height:1.45;margin-top:2px">Non-alc energy is winning; AlcoBev is managing structural decline — two very different stories</div></div></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:9px 12px;background:var(--bg);border-radius:8px;border-left:3px solid var(--purple)"><span style="font-size:15px;flex-shrink:0">🏠</span><div><div style="font-weight:700;font-size:12px">HPC</div><div style="font-size:11px;color:var(--gray);line-height:1.45;margin-top:2px">7 companies, two competing growth philosophies: P&G's sustained investment vs. Unilever's margin-first sequencing</div></div></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:9px 12px;background:var(--bg);border-radius:8px;border-left:3px solid #C2185B"><span style="font-size:15px;flex-shrink:0">💄</span><div><div style="font-weight:700;font-size:12px">Beauty</div><div style="font-size:11px;color:var(--gray);line-height:1.45;margin-top:2px">Science moat (L'Oréal) vs. cultural velocity (e.l.f.) — mid-tier brands must now pick a lane</div></div></div>
+      <div style="display:flex;gap:10px;align-items:flex-start;padding:9px 12px;background:var(--bg);border-radius:8px;border-left:3px solid #795548"><span style="font-size:15px;flex-shrink:0">🔄</span><div><div style="font-weight:700;font-size:12px">Tobacco / Smoke-Free</div><div style="font-size:11px;color:var(--gray);line-height:1.45;margin-top:2px">The most advanced self-disruption story in CPG — PMI is already 43% smoke-free by revenue</div></div></div>
     </div>
   </div>
 </div>
@@ -173,10 +192,8 @@ td{padding:8px 10px}
     <div class="sn">Bubble size = breadth of industry exposure · Click a bubble to jump to detail · Color = maturity</div>
     <div style="margin-left:18px">
       <div class="matrix">
-        <div class="q-lbl" style="top:10px;left:12px">MONITOR</div>
-        <div class="q-lbl" style="top:10px;right:12px">ACT NOW</div>
-        <div class="q-lbl" style="bottom:10px;left:12px">LOW PRIORITY</div>
-        <div class="q-lbl" style="bottom:10px;right:12px">PLAN AHEAD</div>
+        <div class="q-lbl" style="top:10px;left:12px">MONITOR</div><div class="q-lbl" style="top:10px;right:12px">ACT NOW</div>
+        <div class="q-lbl" style="bottom:10px;left:12px">LOW PRIORITY</div><div class="q-lbl" style="bottom:10px;right:12px">PLAN AHEAD</div>
         <div style="position:absolute;top:50%;left:0;right:0;height:1px;background:var(--gray-lt)"></div>
         <div style="position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--gray-lt)"></div>
         <div class="bubble" style="left:88%;top:18%;width:70px;height:70px;background:rgba(232,83,63,.13);border:2.5px solid var(--coral)" onclick="scrollToCard(1)"><div style="font-weight:900;font-size:14px;color:var(--coral);line-height:1">#1</div><div style="font-size:9px;color:var(--coral);font-weight:600;text-align:center;max-width:60px;line-height:1.2">Volume Recovery</div></div>
@@ -197,20 +214,16 @@ td{padding:8px 10px}
   </div>
   <div class="card cp" style="margin-bottom:20px">
     <div class="sl">Category Skew — Which Segments Feel Each Problem Most Acutely</div>
-    <div style="overflow-x:auto">
-      <table>
-        <thead><tr style="background:#1A1A1A">
-          <th>PROBLEM</th><th class="c">Food & Bev</th><th class="c">Snacks</th><th class="c">Beverages</th><th class="c">HPC</th><th class="c">Beauty</th><th class="c">Ingredients</th>
-        </tr></thead>
-        <tbody>
-          <tr style="background:var(--bg)"><td style="font-weight:700">#1 Volume Recovery</td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:var(--gray-lt);color:var(--gray)">Low</span></td><td class="c"><span class="tag" style="background:var(--gray-lt);color:var(--gray)">Low</span></td></tr>
-          <tr><td style="font-weight:700">#2 AI Execution Gap</td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:var(--gray-lt);color:var(--gray)">Low</span></td></tr>
-          <tr style="background:var(--bg)"><td style="font-weight:700">#3 GLP-1 / Wellness</td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td></tr>
-          <tr><td style="font-weight:700">#4 Agentic Commerce</td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:var(--gray-lt);color:var(--gray)">Low</span></td></tr>
-          <tr style="background:var(--bg)"><td style="font-weight:700">#5 Opex Simplification</td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td></tr>
-        </tbody>
-      </table>
-    </div>
+    <div style="overflow-x:auto"><table>
+      <thead><tr style="background:#1A1A1A"><th>PROBLEM</th><th class="c">Food & Bev</th><th class="c">Snacks</th><th class="c">Beverages</th><th class="c">HPC</th><th class="c">Beauty</th><th class="c">Ingredients</th></tr></thead>
+      <tbody>
+        <tr style="background:var(--bg)"><td style="font-weight:700">#1 Volume Recovery</td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:var(--gray-lt);color:var(--gray)">Low</span></td><td class="c"><span class="tag" style="background:var(--gray-lt);color:var(--gray)">Low</span></td></tr>
+        <tr><td style="font-weight:700">#2 AI Execution Gap</td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:var(--gray-lt);color:var(--gray)">Low</span></td></tr>
+        <tr style="background:var(--bg)"><td style="font-weight:700">#3 GLP-1 / Wellness</td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td></tr>
+        <tr><td style="font-weight:700">#4 Agentic Commerce</td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:var(--gray-lt);color:var(--gray)">Low</span></td></tr>
+        <tr style="background:var(--bg)"><td style="font-weight:700">#5 Opex Simplification</td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(232,83,63,.12);color:var(--coral)">High</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td><td class="c"><span class="tag" style="background:rgba(245,166,35,.12);color:#9A6500">Med</span></td></tr>
+      </tbody>
+    </table></div>
   </div>
   <div class="sl">Double-Click — Evidence & Implications</div>
   <div id="prob-cards"></div>
@@ -220,11 +233,11 @@ td{padding:8px 10px}
 <div id="tab-provoke" class="tab-content">
   <div style="background:#1A1A1A;border-radius:12px;padding:16px 22px;margin-bottom:18px;color:#fff">
     <div class="sl" style="color:#CC66FF">10 CRITICAL QUESTIONS FOR CPG C-SUITE LEADERS</div>
-    <p style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:12px">Organized across three strategic horizons — from burning execution gaps to decade-defining structural shifts. Each question surfaces an implication that CAGNY 2026 made visible but no company fully answered on stage.</p>
+    <p style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.65;margin-bottom:12px">Organized across three strategic horizons — from burning execution gaps to decade-defining structural shifts.</p>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
-      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 12px;flex:1;min-width:180px"><div style="width:10px;height:10px;border-radius:50%;background:var(--coral);flex-shrink:0"></div><div><div style="font-size:11px;font-weight:800;color:var(--coral)">NOW · 0–6 mo</div><div style="font-size:10px;color:rgba(255,255,255,.45)">Burning execution gaps</div></div></div>
-      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 12px;flex:1;min-width:180px"><div style="width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0"></div><div><div style="font-size:11px;font-weight:800;color:var(--gold)">NEXT · 6–18 mo</div><div style="font-size:10px;color:rgba(255,255,255,.45)">Strategic choices that can't wait</div></div></div>
-      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 12px;flex:1;min-width:180px"><div style="width:10px;height:10px;border-radius:50%;background:var(--purple-dk);flex-shrink:0"></div><div><div style="font-size:11px;font-weight:800;color:var(--purple-dk)">BEYOND · 18+ mo</div><div style="font-size:10px;color:rgba(255,255,255,.45)">Structural shifts defining the decade</div></div></div>
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 12px;flex:1;min-width:160px"><div style="width:10px;height:10px;border-radius:50%;background:var(--coral);flex-shrink:0"></div><div><div style="font-size:11px;font-weight:800;color:var(--coral)">NOW · 0–6 mo</div><div style="font-size:10px;color:rgba(255,255,255,.45)">Burning execution gaps</div></div></div>
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 12px;flex:1;min-width:160px"><div style="width:10px;height:10px;border-radius:50%;background:var(--gold);flex-shrink:0"></div><div><div style="font-size:11px;font-weight:800;color:var(--gold)">NEXT · 6–18 mo</div><div style="font-size:10px;color:rgba(255,255,255,.45)">Strategic choices that can't wait</div></div></div>
+      <div style="display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 12px;flex:1;min-width:160px"><div style="width:10px;height:10px;border-radius:50%;background:var(--purple-dk);flex-shrink:0"></div><div><div style="font-size:11px;font-weight:800;color:var(--purple-dk)">BEYOND · 18+ mo</div><div style="font-size:10px;color:rgba(255,255,255,.45)">Structural shifts defining the decade</div></div></div>
     </div>
   </div>
   <div id="prov-cards"></div>
@@ -249,48 +262,34 @@ td{padding:8px 10px}
   <div class="gauto" id="fact-cards"></div>
   <div style="text-align:center;padding:14px 0 2px;font-size:11px;color:var(--gray)">All facts sourced from public CAGNY 2026 presentations, IR materials and analyst transcripts · Feb 16–20 2026</div>
 </div>
-
 </div>
 
 <div class="footer">
-  <div style="display:flex;align-items:center;gap:8px">
-    <div style="width:16px;height:16px;background:var(--purple);clip-path:polygon(0 0,100% 50%,0 100%)"></div>
-    <span style="font-size:11px;color:rgba(255,255,255,.45);font-weight:600">Accenture · CAGNY 2026 Intelligence Brief</span>
-  </div>
+  <div style="display:flex;align-items:center;gap:8px"><div style="width:16px;height:16px;background:var(--purple);clip-path:polygon(0 0,100% 50%,0 100%)"></div><span style="font-size:11px;color:rgba(255,255,255,.45);font-weight:600">Accenture · CAGNY 2026 Intelligence Brief</span></div>
   <span style="font-size:11px;color:rgba(255,255,255,.3)">Feb 16–20 · Signia by Hilton, Orlando · For internal client dialogue use</span>
 </div>
 
 <script>
-function showTab(id,btn){
-  document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(el=>el.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  btn.classList.add('active');
-}
-function scrollToCard(rank){
-  const t=document.getElementById('prob-card-'+rank);
-  if(!t)return;
-  t.scrollIntoView({behavior:'smooth',block:'start'});
-  t.classList.remove('card-hl');void t.offsetWidth;t.classList.add('card-hl');
-}
+function showTab(id,btn){document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(el=>el.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active')}
+function scrollToCard(rank){const t=document.getElementById('prob-card-'+rank);if(!t)return;t.scrollIntoView({behavior:'smooth',block:'start'});t.classList.remove('card-hl');void t.offsetWidth;t.classList.add('card-hl')}
 
 const themes=[
   {id:'portfolio',icon:'🎯',label:'Portfolio Discipline',headline:'Back to Basics — Power Brands Win',pct:95,color:'#A100FF',summary:'Nearly every presenter announced SKU rationalization, divestiture, or non-core asset exits. Complexity is being cut; investment concentrating behind fewer, stronger brands.',proof:[{co:'General Mills',stat:'Price/Pack Architecture projected to deliver 2× net sales vs. prior year'},{co:'Conagra',stat:'Project Catalyst embeds AI across end-to-end processes for revenue, margin & cash'},{co:'Kraft Heinz',stat:"Tiered 'Hold / Win / Win Big' architecture — $600M incremental 2026 investment"},{co:'Unilever',stat:'Power Brands strategy; absent from CAGNY for 4 years — back with radical simplification story'},{co:'Church & Dwight',stat:'SKU pruning framed as a prerequisite for growth, not a cost exercise'}],segment:null},
   {id:'rgm',icon:'💰',label:'Revenue Growth Management',headline:'RGM Elevated from Defense to Offense',pct:90,color:'#F5A623',summary:'RGM has evolved from a margin-protection tool into a strategic growth engine. Price-pack architecture, promotional ROI discipline, and value-tier navigation dominated conversations.',proof:[{co:'General Mills',stat:'~90% of elasticities at or better than expected; 2/3 of portfolio below price cliffs'},{co:'Kraft Heinz',stat:'Bulk pack +1.1pts AND small pack +1.2pts simultaneously — managing both value poles'},{co:'Celsius',stat:'Formal RGM capability build-out covering pricing, pack mix, promo effectiveness & ROI'},{co:'J.M. Smucker',stat:'Uncrustables targeting $1B net sales FY26 — organic brand-building proof point'},{co:'PepsiCo',stat:'Selective pricing and value-tier investment to recover volume share'}],segment:null},
   {id:'ai',icon:'🤖',label:'AI — Into the Operating Model',headline:'The AI Dividing Line Is Now Visible',pct:88,color:'#6A0099',summary:'AI is no longer experimentation. Leaders embed it into specific business processes with measurable ROI. A stark gap between AI-at-scale operators and early-stage adopters emerged.',proof:[{co:'Conagra',stat:'AI promo optimization → +9pts promo lift in Q2 FY26 vs. prior year'},{co:'Reckitt',stat:'Up to 70% time savings on consumer insight access; 2× improvement in concept quality'},{co:"L'Oréal",stat:'€1.5B technology investment; 725 patents filed; AI across beauty science & retail'},{co:'Colgate',stat:'Clean rooms + Media Mix Modeling infrastructure deployed at enterprise scale'},{co:'Kraft Heinz',stat:'Zero AI mention — flagged by analysts as a notable gap for a company in recovery mode'}],segment:'Leaders: Food & Bev, Beauty, HPC. Laggards: Some Beverages, legacy Snacks.'},
   {id:'consumer',icon:'👥',label:'Consumer Polarization',headline:'Two Consumers, One Portfolio — Both Must Win',pct:85,color:'#E8533F',summary:'Executives are explicitly designing for a bifurcated consumer economy: value-stretched lower-income households and premium-seeking upper-income households. One-size strategies are being abandoned.',proof:[{co:'Conagra',stat:'Explicitly names two poles: lower-income just-in-time vs. upper-income pantry builders'},{co:'Coca-Cola',stat:'Dual-strategy: affordable entry SKUs + premium occasions portfolio in parallel'},{co:'Mondelēz',stat:'Portion-control + indulgence premiumization in parallel innovation tracks'},{co:'Kraft Heinz',stat:'SNAP benefit reductions cited as a structural headwind in FY25 guidance'},{co:'Celsius',stat:'Hispanic consumers #1 in trip growth +10.6%; gender-differentiated consumption segmentation'}],segment:'Most acute in Food & Bev and Snacks; also visible in HPC (private label threat).'},
-  {id:'ma',icon:'🔀',label:'M&A & Portfolio Reshaping',headline:'Every Company Told an M&A Story',pct:80,color:'#00C4B3',summary:'Virtually every presenter referenced a recent acquisition, divestiture, or spin-off. Leaders reshaping toward higher-growth, higher-margin, capability-aligned categories.',proof:[{co:'Kimberly-Clark',stat:'Pending $48.7B Kenvue deal creates $32B+ revenue health & hygiene entity with 10 billion-dollar brands'},{co:'Celsius',stat:'Three-brand energy platform (Celsius, Alani Nu, Rockstar) = ~20% combined US energy market share'},{co:'Unilever',stat:'Magnum Ice Cream demerger Dec 2025; radical sharpening to power brand focus'},{co:'Philip Morris',stat:'Smoke-free portfolio at ~$17B of $40B revenues; 11%+ EPS growth targets reaffirmed'},{co:'PwC recap',stat:'Almost all companies shared an M&A story — active reshaping toward higher-growth categories'}],segment:'Most transformational: Tobacco (smoke-free pivot), Beverages (energy), HPC (health adjacency).'},
+  {id:'ma',icon:'🔀',label:'M&A & Portfolio Reshaping',headline:'Every Company Told an M&A Story',pct:80,color:'#00C4B3',summary:'Virtually every presenter referenced a recent acquisition, divestiture, or spin-off. Leaders reshaping toward higher-growth, higher-margin, capability-aligned categories.',proof:[{co:'Kimberly-Clark',stat:'Pending $48.7B Kenvue deal creates $32B+ revenue health & hygiene entity with 10 billion-dollar brands'},{co:'Celsius',stat:'Three-brand energy platform (Celsius, Alani Nu, Rockstar) = ~20% combined US energy market share'},{co:'Unilever',stat:'Magnum Ice Cream demerger Dec 2025; radical sharpening to power brand focus'},{co:'Philip Morris',stat:'Smoke-free portfolio at ~$17B of $40B revenues; 11%+ EPS growth targets reaffirmed'},{co:'Molson Coors',stat:'Fever-Tree acquisition now their highest per-hectoliter brand — beyond-beer pivot underway'}],segment:'Most transformational: Tobacco (smoke-free pivot), Beverages (energy), HPC (health adjacency).'},
   {id:'wellness',icon:'🥗',label:'Wellness & GLP-1',headline:'GLP-1 Is a Portfolio Restructuring Event',pct:75,color:'#3D8B37',summary:"GLP-1 drug adoption treated as structural demand shift. For Food it means reformulation toward smaller, denser, protein-forward formats. For Beauty & HPC it creates a direct product opportunity via 'Ozempic face' skin effects.",proof:[{co:'Hormel',stat:'GLP-1 market $62B → $158B by 2035; 60% of consumers prefer natural food-source protein'},{co:'General Mills',stat:'GLP-1 nudging consumers toward smaller portions and protein/fiber-forward foods — in official roadmap'},{co:'Conagra',stat:'100% of Frozen free from artificial colors by 2027; 65% of portfolio already cleaner-label'},{co:'Beauty/HPC context',stat:"GLP-1 users driving demand for skin-firming, collagen, oral care — 'Ozempic face' is a real product brief (Kline+Co, 2026)"},{co:'PepsiCo',stat:"Restaging Lay's, Gatorade, Quaker with fewer ingredients and better-for-you profiles"}],segment:'Food/Protein: threat/reformulation driver. Beauty & HPC: ✅ OPPORTUNITY — skin-firming, oral care, collagen-support, gourmand fragrance.'},
 ];
 
 const segments=[
-  {seg:'Food & Beverage',color:'#0070C0',icon:'🍎',cos:'General Mills · Conagra · Coca-Cola · PepsiCo · J.M. Smucker · McCormick',situation:'Six of the most closely watched companies in CPG presented in Food & Beverage — and every single one acknowledged the same reality: the post-inflation pricing cycle is over, volume recovery is the defining KPI for 2026, and execution precision — not category tailwinds — is the only path forward. Private label is structurally stronger. Consumer wallets are structurally tighter.',tension:'Invest aggressively behind brand and innovation to recover volume now — accepting short-term margin compression — or protect margin discipline and wait for the consumer environment to improve? Companies spending now risk being wrong about the timing; companies waiting risk losing share permanently to private label and faster-moving competitors.',watch:[{signal:'Conagra\'s AI-to-revenue proof point',detail:"Conagra presented the most concrete AI-to-commercial outcome in the segment: promotion optimisation powered by AI delivered +9 points of promo lift in Q2 FY26 vs. prior year. Their 'Project Catalyst' embeds AI across end-to-end processes simultaneously targeting revenue, margin, and cash flow — the benchmark for what embedded AI looks like in Food & Bev"},{signal:'Coca-Cola vs. PepsiCo: two divergent recovery strategies',detail:'Coca-Cola is organising their commercial model around consumer occasions — the right drink for every moment — while PepsiCo is restaging core brands (Lay\'s, Gatorade, Quaker) around health credentials. One is a demand-creation play; the other is a brand-equity repair play. Which drives volume recovery faster will define the category\'s commercial playbook for the next three years'},{signal:'McCormick and Smucker as reformulation beneficiaries',detail:"As Food & Bev companies reformulate — cleaner labels, fewer ingredients, bolder flavour profiles — flavour and ingredient partners like McCormick become strategic infrastructure. Smucker's Uncrustables ($1B organic) and McCormick's flavour-as-platform thesis both signal that companies supplying 'what goes inside' have significant pricing power as reformulation accelerates"}]},
+  {seg:'Food & Beverage',color:'#0070C0',icon:'🍎',cos:'General Mills · Conagra · Coca-Cola · PepsiCo · J.M. Smucker · McCormick',situation:'Six of the most closely watched companies in CPG presented in Food & Beverage — and every single one acknowledged the same reality: the post-inflation pricing cycle is over, volume recovery is the defining KPI for 2026, and execution precision — not category tailwinds — is the only path forward. Private label is structurally stronger. Consumer wallets are structurally tighter.',tension:'Invest aggressively behind brand and innovation to recover volume now — accepting short-term margin compression — or protect margin discipline and wait for the consumer environment to improve? Companies spending now risk being wrong about the timing; companies waiting risk losing share permanently to private label and faster-moving competitors.',watch:[{signal:"Conagra's AI-to-revenue proof point",detail:"Conagra presented the most concrete AI-to-commercial outcome in the segment: promotion optimisation powered by AI delivered +9 points of promo lift in Q2 FY26 vs. prior year. Their 'Project Catalyst' embeds AI across end-to-end processes simultaneously targeting revenue, margin, and cash flow — the benchmark for what embedded AI looks like in Food & Bev"},{signal:'Coca-Cola vs. PepsiCo: two divergent recovery strategies',detail:"Coca-Cola is organising their commercial model around consumer occasions — the right drink for every moment — while PepsiCo is restaging core brands (Lay's, Gatorade, Quaker) around health credentials. One is a demand-creation play; the other is a brand-equity repair play. Which drives volume recovery faster will define the category's commercial playbook for the next three years"},{signal:'McCormick and Smucker as reformulation beneficiaries',detail:"As Food & Bev companies reformulate — cleaner labels, fewer ingredients, bolder flavour profiles — flavour and ingredient partners like McCormick become strategic infrastructure. Smucker's Uncrustables ($1B organic) and McCormick's flavour-as-platform thesis both signal that companies supplying 'what goes inside' have significant pricing power as reformulation accelerates"}]},
   {seg:'Snacks',color:'#F5A623',icon:'🥨',cos:'Mondelēz · Utz Brands · Hormel (Planters / substantial snacking)',situation:'Snacks is the segment where consumer polarisation is most acute and most visible on shelf. Value formats and premium indulgence are both growing — everything in the middle is being squeezed. Bold flavours, portability, and clean labels are table stakes; the question is which brands have the equity to command a premium for them.',tension:'Scale nationally behind power brands and risk losing regional relevance, or stay close to local markets and forfeit the efficiency and media weight that national scale delivers? Utz and Mondelēz represent the two ends of this spectrum — and neither has fully resolved it.',watch:[{signal:"Mondelēz's emerging market snacking bet",detail:'Mondelēz framed global snacking growth as increasingly driven by emerging markets — where rising incomes, urbanisation, and the globalisation of snack formats create a long runway that mature Western markets cannot replicate. This is the growth thesis that justifies the portfolio complexity'},{signal:"Utz's regional-to-national tension",detail:'Utz presented a credible regional brand portfolio with deep consumer loyalty — but the path to national scale requires marketing investment that compresses margins near-term. Their deliberate restraint (debt reduction first, no aggressive M&A) is disciplined but limits velocity'},{signal:'Protein redefining the snack occasion',detail:"Hormel's 165% growth in menu protein mentions signals protein is migrating from meals into snack occasions — brands that own 'satisfying snack' rather than 'treat snack' are building a structurally different and more defensible consumer relationship"}]},
-  {seg:'Beverages — Non-Alcoholic',color:'#00C4B3',icon:'🥤',cos:'Coca-Cola · PepsiCo · Celsius Holdings · Vita Coco',situation:'Non-alc beverages was the most energetic sub-segment at CAGNY 2026. Energy drinks (Celsius) delivered +22.4% retail sales growth. Coca-Cola and PepsiCo managed dual-tier strategies across value and premium occasions. Vita Coco made its inaugural CAGNY appearance, signalling the mainstreaming of functional hydration.',tension:'Build a multi-occasion platform that stretches from hydration to energy to indulgence — or go deep on a single consumer need state and own it completely? Celsius chose the latter and is winning. Coca-Cola and PepsiCo chose the former and are managing complexity. Both strategies have merit; neither is obviously right.',watch:[{signal:"Coca-Cola's occasion architecture",detail:"Coca-Cola's strategic framing at CAGNY was built around occasions, not categories — positioning their portfolio as the right drink for every moment. This is a fundamentally different competitive posture from Celsius's need-state ownership, and it's being validated by consistent volume performance across markets"},{signal:"PepsiCo's Gatorade and Quaker restage",detail:'PepsiCo is simultaneously restaging two iconic non-cola brands around protein and hydration credentials. This signals their bet that health-oriented restaging of legacy brands can recover volume faster than building new ones'},{signal:'Vita Coco: category creation vs. category scaling',detail:"Vita Coco's CAGNY debut revealed 42% US coconut water market share built almost entirely through category education. The signal: the next high-growth beverage sub-category probably doesn't exist in meaningful scale yet — companies building it now will own it"}]},
-  {seg:'Beverages — AlcoBev',color:'#795548',icon:'🍺',cos:'Molson Coors (only presenter) · ⚠️ Diageo, Heineken, Brown-Forman, AB InBev — all absent',situation:'AlcoBev was the most notable gap at CAGNY 2026. Only Molson Coors represented the entire alcoholic beverages category. The spirits and global beer majors were conspicuously absent, leaving the investor community with a single, challenged data point for a category facing structural headwinds.',tension:"Defend the core beer/spirits business with investment and brand-building — or accelerate the pivot into beyond-beer, premium mixers, and low/no-alcohol alternatives? Committing to the core risks being caught flat-footed if structural decline accelerates; pivoting too fast risks destroying the cash engine that funds the transition.",watch:[{signal:'⚠️ The absence tells its own story',detail:'Diageo: New CEO Sir Dave Lewis (Nov 2025), EABL divestiture underway. Heineken: CEO stepped down Jan 2026, active CEO search. Brown-Forman: Mid-restructuring (12% workforce reduction, tariff headwinds on Jack Daniel\'s). AB InBev: Historically not a CAGNY regular. Zero representation from the world\'s largest beer company, largest spirits company, and second-largest beer company — a strategic silence that is itself a data point'},{signal:"Molson Coors 'Horizon 2030' — a candid reset",detail:"CEO Rahul Goyal presented without spin: 2026 guidance of flat NSR (+/- 1%) and underlying pretax income down 15–18%. The plan centres on localising P&L accountability ('beer is a very local business — decisions in days, not quarters'), a $450M cost savings program, and M&A targeting 1–2% NSR annually"},{signal:'Fever-Tree as the beyond-beer signal',detail:"Molson Coors' Fever-Tree acquisition — now their highest per-hectoliter brand — signals the strategic direction: premium mixers, functional adjacencies, and low/no-alcohol formats as structural insurance against beer volume decline"}]},
+  {seg:'Beverages — Non-Alcoholic',color:'#00C4B3',icon:'🥤',cos:'Coca-Cola · PepsiCo · Celsius Holdings · Vita Coco',situation:'Non-alc beverages was the most energetic sub-segment at CAGNY 2026. Energy drinks (Celsius) delivered +22.4% retail sales growth. Coca-Cola and PepsiCo managed dual-tier strategies across value and premium occasions. Vita Coco made its inaugural CAGNY appearance, signalling the mainstreaming of functional hydration.',tension:'Build a multi-occasion platform that stretches from hydration to energy to indulgence — or go deep on a single consumer need state and own it completely? Celsius chose the latter and is winning. Coca-Cola and PepsiCo chose the former and are managing complexity. Both strategies have merit; neither is obviously right.',watch:[{signal:"Coca-Cola's occasion architecture",detail:"Coca-Cola's strategic framing at CAGNY was built around occasions, not categories — positioning their portfolio as the right drink for every moment. This is a fundamentally different competitive posture from Celsius's need-state ownership, and it's being validated by consistent volume performance across markets"},{signal:"PepsiCo's Gatorade and Quaker restage",detail:"PepsiCo is simultaneously restaging two iconic non-cola brands around protein and hydration credentials — their bet that health-oriented restaging of legacy brands can recover volume faster than building new ones"},{signal:'Vita Coco: category creation vs. category scaling',detail:"Vita Coco's CAGNY debut revealed 42% US coconut water market share built almost entirely through category education. The signal: the next high-growth beverage sub-category probably doesn't exist in meaningful scale yet — companies building it now will own it"}]},
+  {seg:'Beverages — AlcoBev',color:'#795548',icon:'🍺',cos:'Molson Coors (only presenter) · ⚠️ Diageo, Heineken, Brown-Forman, AB InBev — all absent',situation:'AlcoBev was the most notable gap at CAGNY 2026. Only Molson Coors represented the entire alcoholic beverages category. The spirits and global beer majors were conspicuously absent, leaving the investor community with a single, challenged data point for a category facing structural headwinds.',tension:"Defend the core beer/spirits business with investment and brand-building — or accelerate the pivot into beyond-beer, premium mixers, and low/no-alcohol alternatives? Committing to the core risks being caught flat-footed if structural decline accelerates; pivoting too fast risks destroying the cash engine that funds the transition.",watch:[{signal:'⚠️ The absence tells its own story',detail:"Diageo: New CEO Sir Dave Lewis (Nov 2025), EABL divestiture underway. Heineken: CEO stepped down Jan 2026, active CEO search. Brown-Forman: Mid-restructuring (12% workforce reduction, tariff headwinds on Jack Daniel's). AB InBev: Historically not a CAGNY regular. Zero representation from the world's largest beer company, largest spirits company, and second-largest beer company — a strategic silence that is itself a data point"},{signal:"Molson Coors 'Horizon 2030' — a candid reset",detail:"CEO Rahul Goyal presented without spin: 2026 guidance of flat NSR (+/- 1%) and underlying pretax income down 15–18%. The plan centres on localising P&L accountability ('beer is a very local business — decisions in days, not quarters'), a $450M cost savings program, and M&A targeting 1–2% NSR annually"},{signal:'Fever-Tree as the beyond-beer signal',detail:"Molson Coors' Fever-Tree acquisition — now their highest per-hectoliter brand — signals the strategic direction: premium mixers, functional adjacencies, and low/no-alcohol formats as structural insurance against beer volume decline"}]},
   {seg:'HPC (Home & Personal Care)',color:'#A100FF',icon:'🏠',cos:'P&G · Unilever · Reckitt · Kimberly-Clark · Church & Dwight · Clorox · Colgate-Palmolive',situation:'HPC was the largest segment at CAGNY 2026 by company count — seven presenters across home care, personal care, oral care, and health adjacencies — and the sharpest contrast in strategic maturity. P&G and Reckitt are operating at AI-at-scale. Unilever is mid-reinvention after 4 years away from CAGNY, with 460bps gross margin expansion and a new CEO. Kimberly-Clark is about to transform its identity through the Kenvue acquisition.',tension:"Rebuild brand equity through superior product performance and sustained marketing investment — P&G's 'superiority' thesis — or drive margin expansion first and fund reinvestment from that recovery — Unilever's approach? Both paths are being validated simultaneously, creating a genuine dilemma for mid-tier HPC players who can't afford to do both.",watch:[{signal:"Unilever's 460bps gross margin expansion — and the sequencing decision",detail:"Two-thirds of Unilever's 460bps gross margin expansion went back into brand investment; one-third flowed to the bottom line. New CEO Fernando Fernandez's first CAGNY appearance set a clear philosophy: fix the margin, fund the brand, then grow. This sequencing model differs meaningfully from P&G's sustained investment approach"},{signal:"P&G's 'constructive disruption' — technology as growth agenda",detail:"P&G's CIO presented alongside the CEO and CFO at CAGNY — a structural signal that technology is a board-level growth agenda, not an IT function. Supply Chain 3.0 is framed as a commercial enabler: connecting consumer insight to shelf faster than competitors"},{signal:"Kimberly-Clark's pipeline quality before the Kenvue transformation",detail:"Innovation gross margins running 280bps above the base business, R&D consolidated from 300 projects to 11 global platforms in 12 months — the operating model simplification playbook KMB intends to apply to Kenvue's portfolio"}]},
-  {seg:'Beauty',color:'#C2185B',icon:'💄',cos:"L'Oréal · e.l.f. Beauty",situation:"Beauty was the standout segment for strategic confidence at CAGNY 2026. L'Oréal presented from a position of structural momentum — record year, €1.5B tech investment, 725 patents filed. e.l.f. demonstrated that value positioning and premium brand perception can coexist. The category is being fundamentally redefined by science, AI, and the blurring of beauty and wellness.",tension:"Double down on science and AI investment to build a formulation and personalisation moat that only scale can fund — the L'Oréal model — or build cultural resonance and speed-to-trend to win consumer attention before the science catches up — the e.l.f. model? Mid-tier beauty brands are being forced to choose, and the middle ground is shrinking fast.",watch:[{signal:"L'Oréal's AI formulation moat — a compounding advantage",detail:"725 patents and €1.5B in technology investment is R&D infrastructure that compresses time-from-insight-to-shelf and enables personalisation at scale. L'Oréal's science capabilities in dermatology, microbiome, and photobiology are being accelerated by AI in ways competitors cannot replicate without similar investment — the gap widens every year"},{signal:"e.l.f.'s cultural velocity model",detail:"e.l.f. demonstrated that a value-positioned brand can generate premium perception through cultural speed — viral moments, creator partnerships, and trend responsiveness that move faster than traditional NPD cycles. The question is whether this model scales beyond their current consumer base"},{signal:'Beauty-wellness convergence as the next category boundary',detail:"The line between beauty, wellness, nutrition, and personal care is dissolving. Products at the intersection — skin health, ingestible beauty, microbiome-linked formulations — are growing faster than either category alone. L'Oréal's dermatology acquisitions and Kenvue's consumer health portfolio both point to the same destination"}]},
-  {seg:'Tobacco / Smoke-Free',color:'#5D4037',icon:'🔄',cos:'Philip Morris International · British American Tobacco · Altria',situation:'Three companies in the same structural transition — from combustible tobacco toward smoke-free alternatives — but at meaningfully different stages. PMI is furthest along with smoke-free now ~$17B of $40B in revenues. BAT and Altria are following the same arc at different speeds, with different product mix bets across heat-not-burn, pouches, and e-vapor.',tension:"How fast do you fund the smoke-free transition — which requires massive R&D, consumer education, and regulatory navigation — while combustible volumes still generate the cash that makes it possible? Move too slowly and lose the smoke-free window; move too fast and risk the combustible cash engine before the alternative is fully self-funding.",watch:[{signal:"PMI's smoke-free inflection point",detail:"At ~$17B, PMI's smoke-free portfolio has crossed a threshold — too large to describe as 'emerging', too strategically central to treat as a hedge. With 2026–2028 EPS growth targets of 11%+, smoke-free is the growth engine and combustibles are the funding mechanism"},{signal:'Product format differentiation as the competitive moat',detail:'PMI is heaviest in heat-not-burn (IQOS), BAT more diversified across vaping and pouches, Altria investing in on! nicotine pouches. Consumer migration data — who switches, to what format, at what pace — is the proprietary intelligence each company is building and none is sharing'},{signal:"Altria's asymmetric regulatory exposure vs. PMI's global diversification",detail:"PMI's 180+ market footprint means any single regulatory decision is manageable. For Altria — essentially a US-only business — a single FDA decision on flavoured pouches or IQOS import status can reshape the entire investment thesis overnight"}]},
+  {seg:'Beauty',color:'#C2185B',icon:'💄',cos:"L'Oréal · e.l.f. Beauty",situation:"Beauty was the standout segment for strategic confidence at CAGNY 2026. L'Oréal presented from a position of structural momentum — record year, €1.5B tech investment, 725 patents filed. e.l.f. demonstrated that value positioning and premium brand perception can coexist. The category is being fundamentally redefined by science, AI, and the blurring of beauty and wellness.",tension:"Double down on science and AI investment to build a formulation and personalisation moat that only scale can fund — the L'Oréal model — or build cultural resonance and speed-to-trend to win consumer attention before the science catches up — the e.l.f. model? Mid-tier beauty brands are being forced to choose, and the middle ground is shrinking fast.",watch:[{signal:"L'Oréal's AI formulation moat — a compounding advantage",detail:"725 patents and €1.5B in technology investment is R&D infrastructure that compresses time-from-insight-to-shelf and enables personalisation at scale. L'Oréal's science capabilities in dermatology, microbiome, and photobiology are being accelerated by AI in ways competitors cannot replicate without similar investment — the gap widens every year"},{signal:"e.l.f.'s cultural velocity model",detail:"e.l.f. demonstrated that a value-positioned brand can generate premium perception through cultural speed — viral moments, creator partnerships, and trend responsiveness that move faster than traditional NPD cycles. The question is whether this model scales beyond their current consumer base"},{signal:'Beauty-wellness convergence as the next category boundary',detail:"The line between beauty, wellness, nutrition, and personal care is dissolving. Products at the intersection — skin health, ingestible beauty, microbiome-linked formulations — are growing faster than either category alone"}]},
+  {seg:'Tobacco / Smoke-Free',color:'#5D4037',icon:'🔄',cos:'Philip Morris International · British American Tobacco · Altria',situation:'Three companies in the same structural transition — from combustible tobacco toward smoke-free alternatives — but at meaningfully different stages. PMI is furthest along with smoke-free now ~$17B of $40B in revenues. BAT and Altria are following the same arc at different speeds.',tension:"How fast do you fund the smoke-free transition — which requires massive R&D, consumer education, and regulatory navigation — while combustible volumes still generate the cash that makes it possible? Move too slowly and lose the smoke-free window; move too fast and risk the combustible cash engine before the alternative is fully self-funding.",watch:[{signal:"PMI's smoke-free inflection point",detail:"At ~$17B, PMI's smoke-free portfolio has crossed a threshold — too large to describe as 'emerging', too strategically central to treat as a hedge. With 2026–2028 EPS growth targets of 11%+, smoke-free is the growth engine and combustibles are the funding mechanism"},{signal:'Product format differentiation as the competitive moat',detail:'PMI is heaviest in heat-not-burn (IQOS), BAT more diversified across vaping and pouches, Altria investing in on! nicotine pouches. Consumer migration data — who switches, to what format, at what pace — is the proprietary intelligence each company is building and none is sharing'},{signal:"Altria's asymmetric regulatory exposure vs. PMI's global diversification",detail:"PMI's 180+ market footprint means any single regulatory decision is manageable. For Altria — essentially a US-only business — a single FDA decision on flavoured pouches or IQOS import status can reshape the entire investment thesis overnight"}]},
 ];
 
 const problems=[
@@ -329,7 +328,7 @@ const companies=[
   {name:'Mondelēz',day:'Tue 17',seg:'Snacks',tk:'MDLZ',ir:'https://ir.mondelezinternational.com'},
   {name:'Sysco',day:'Tue 17',seg:'Foodservice',tk:'SYY',ir:'https://investors.sysco.com'},
   {name:'Ingredion',day:'Tue 17',seg:'Ingredients',tk:'INGR',ir:'https://ir.ingredion.com'},
-  {name:'McCormick',day:'Tue 17',seg:'Flavor/Spices',tk:'MKC',ir:'https://ir.mccormick.com'},
+  {name:'McCormick',day:'Tue 17',seg:'Flavor / Spices',tk:'MKC',ir:'https://ir.mccormick.com'},
   {name:'Church & Dwight',day:'Wed 18',seg:'HPC',tk:'CHD',ir:'https://ir.churchdwight.com'},
   {name:'PepsiCo',day:'Wed 18',seg:'Food & Beverage',tk:'PEP',ir:'https://www.pepsico.com/investors'},
   {name:'Philip Morris Intl',day:'Wed 18',seg:'Tobacco/Smoke-Free',tk:'PM',ir:'https://www.pmi.com/investor-relations'},
@@ -360,251 +359,117 @@ const funFacts=[
   {rank:3,emoji:'👧',title:'A Frozen PB&J Sandwich Is Worth $1 Billion',co:'J.M. Smucker',tag:'Brand Obsession',color:'#F5A623',fact:"Uncrustables — a frozen, crustless PB&J — is on track for $1 billion in net sales in FY2026. Invented in 1995, dismissed as a novelty, it took 30 years of patient brand investment to reach a billion dollars.",prov:"What 'boring' product in your portfolio might be the Uncrustables of the next decade — if you just focused on it long enough?"},
   {rank:4,emoji:'🧊',title:'Celsius Became a 3-Brand Platform While You Were Watching',co:'Celsius Holdings',tag:'Speed of Change',color:'#00C4B3',fact:'One year ago, Celsius presented as a single brand. By 2026, they are a three-brand energy platform with ~20% combined US energy market share. Alani Nu shelf space grew 102% in 2026 retail allocations. The entire transformation happened in under 12 months.',prov:"The fastest-growing company at CAGNY wasn't a 100-year-old icon. What does that say about barriers to entry in your category?"},
   {rank:5,emoji:'👔',title:'Unilever Swapped 9 of 11 Top Executives in 4 Years',co:'Unilever',tag:'Leadership Shock',color:'#A100FF',fact:"Unilever's new CEO revealed that 9 out of 11 members of their top leadership team were not in those roles 4 years ago — including himself. 8 of 10 board members are also new. Their framing: 'This is not instability. This is the necessary leadership refresh.'",prov:"Can a $51B global business genuinely reinvent itself through leadership turnover alone? Or does the operating model need to change as much as the org chart?"},
-  {rank:6,emoji:'🚬',title:'A Tobacco Co. Earns $17B From Products That Replaced Its Core',co:'Philip Morris',tag:'Self-Disruption',color:'#795548',fact:"PMI's smoke-free portfolio now represents ~$17B of $40B in total revenues. The company is deliberately cannibalising cigarettes with its own alternatives, at scale, while projecting 11%+ EPS growth for 2026–2028.",prov:"PMI is the most extreme example of disrupting your own core before someone else does. Which of your own product lines should you be replacing — proactively?"},
+  {rank:6,emoji:'🚬',title:"A Tobacco Co. Earns $17B From Products That Replaced Its Core",co:'Philip Morris',tag:'Self-Disruption',color:'#795548',fact:"PMI's smoke-free portfolio now represents ~$17B of $40B in total revenues. The company is deliberately cannibalising cigarettes with its own alternatives, at scale, while projecting 11%+ EPS growth for 2026–2028.",prov:"PMI is the most extreme example of disrupting your own core before someone else does. Which of your own product lines should you be replacing — proactively?"},
   {rank:7,emoji:'🍫',title:"Kraft Heinz Lost US Market Share for a Decade — and Said It Out Loud",co:'Kraft Heinz',tag:'Radical Candour',color:'#E8533F',fact:'Kraft Heinz management openly acknowledged their US business has been losing retail market share for ten consecutive years. Nearly unprecedented candour from a $26B company at an investor conference. They then announced $600M in reinvestment.',prov:"It took 10 years of decline before the diagnosis was stated publicly. How many companies in your peer set are carrying this story — just not saying it yet?"},
   {rank:8,emoji:'🩺',title:'Kleenex Is About to Own Tylenol, Band-Aid and Listerine',co:'Kimberly-Clark + Kenvue',tag:'Mega M&A',color:'#6A0099',fact:"Kimberly-Clark agreed to acquire Kenvue (Tylenol, Band-Aid, Neutrogena, Listerine) in a $48.7B deal. The combined entity would have $32B+ in revenue, $7B EBITDA, and 10 billion-dollar brands.",prov:"When tissue meets Tylenol, you get a health & wellness platform. Is 'consumer health' the new strategic home for HPC — and who gets left behind?"},
   {rank:9,emoji:'🧠',title:'Protein Menu Mentions Grew 165% in Just Four Years',co:'Hormel',tag:'Consumer Behaviour',color:'#3D8B37',fact:'Hormel presented data showing protein mentions on restaurant menus have grown 165% in four years — actual menu language at scale. 60% of consumers now prefer natural/free-from-artificial protein.',prov:"If protein went from niche to menu-dominant in 4 years, what nutritional attribute is quietly building the same wave right now?"},
   {rank:10,emoji:'⚡',title:'The Conference Ran on Celsius. Literally.',co:'Celsius Holdings',tag:'Meta Moment',color:'#00C4B3',fact:"Celsius sponsored beverages for the entire conference. Every analyst, fund manager, and executive was handed a Celsius can while watching competitors present. The moderator literally drank one on stage before introducing their session.",prov:"Distribution is everything. Celsius got their product into the hands of 300+ of the most influential CPG investment minds in one week. What would your equivalent 'CAGNY moment' look like?"},
 ];
 
-// ── Render brief themes
+// Render brief themes
 (function(){
   const w=document.getElementById('brief-themes');
-  themes.forEach(th=>{
-    w.innerHTML+=`<div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg);border-radius:8px;border-left:3px solid ${th.color}">
-      <span style="font-size:16px;flex-shrink:0">${th.icon}</span>
-      <div style="flex:1"><div style="font-weight:700;font-size:13px">${th.label}</div><div style="font-size:11px;color:var(--gray);line-height:1.4;margin-top:2px">${th.headline}</div></div>
-      <span style="font-size:11px;font-weight:800;color:${th.color};flex-shrink:0">${th.pct}%</span>
-    </div>`;
-  });
+  themes.forEach(th=>{w.innerHTML+=`<div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg);border-radius:8px;border-left:3px solid ${th.color}"><span style="font-size:16px;flex-shrink:0">${th.icon}</span><div style="flex:1"><div style="font-weight:700;font-size:13px">${th.label}</div><div style="font-size:11px;color:var(--gray);line-height:1.4;margin-top:2px">${th.headline}</div></div><span style="font-size:11px;font-weight:800;color:${th.color};flex-shrink:0">${th.pct}%</span></div>`;});
 })();
 
-// ── Render brief problems (top 3 with correct colors)
+// Render brief problems
 (function(){
   const w=document.getElementById('brief-problems');
-  problems.slice(0,3).forEach((p,i)=>{
-    w.innerHTML+=`<div style="display:flex;gap:10px;align-items:flex-start;${i<2?'margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--gray-lt)':''}">
-      <div style="background:${p.uc};color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;flex-shrink:0">#${p.rank}</div>
-      <div style="flex:1"><div style="font-weight:700;font-size:13px">${p.title}</div><div style="font-size:11px;color:var(--gray);line-height:1.4;margin-top:2px">${p.summary.substring(0,90)}…</div></div>
-      <span style="background:${p.uc}20;color:${p.uc};border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;white-space:nowrap;flex-shrink:0">${p.window}</span>
-    </div>`;
-  });
+  problems.slice(0,3).forEach((p,i)=>{w.innerHTML+=`<div style="display:flex;gap:10px;align-items:flex-start;${i<2?'margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--gray-lt)':''}"><div style="background:${p.uc};color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;flex-shrink:0">#${p.rank}</div><div style="flex:1"><div style="font-weight:700;font-size:13px">${p.title}</div><div style="font-size:11px;color:var(--gray);line-height:1.4;margin-top:2px">${p.summary.substring(0,90)}…</div></div><span style="background:${p.uc}20;color:${p.uc};border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;white-space:nowrap;flex-shrink:0">${p.window}</span></div>`;});
 })();
 
-// ── Render theme bars
+// Render theme bars
 (function(){
   const w=document.getElementById('theme-bars');
   themes.forEach(th=>{
     const lbl=th.pct>=90?'Universal':th.pct>=80?'Dominant':'Significant';
-    w.innerHTML+=`<div style="display:flex;align-items:center;gap:12px">
-      <div style="width:180px;font-size:12px;font-weight:700;flex-shrink:0">${th.icon} ${th.label}</div>
-      <div style="flex:1;background:var(--gray-lt);border-radius:6px;height:22px;overflow:hidden">
-        <div style="width:${th.pct}%;height:100%;background:${th.color};border-radius:6px;display:flex;align-items:center;padding-left:8px">
-          <span style="font-size:11px;font-weight:800;color:#fff">${th.pct}%</span>
-        </div>
-      </div>
-      <span class="tag" style="background:${th.color}20;color:${th.color};flex-shrink:0">${lbl}</span>
-    </div>`;
+    w.innerHTML+=`<div style="display:flex;align-items:center;gap:12px"><div style="width:180px;font-size:12px;font-weight:700;flex-shrink:0">${th.icon} ${th.label}</div><div style="flex:1;background:var(--gray-lt);border-radius:6px;height:22px;overflow:hidden"><div style="width:${th.pct}%;height:100%;background:${th.color};border-radius:6px;display:flex;align-items:center;padding-left:8px"><span style="font-size:11px;font-weight:800;color:#fff">${th.pct}%</span></div></div><span class="tag" style="background:${th.color}20;color:${th.color};flex-shrink:0">${lbl}</span></div>`;
   });
 })();
 
-// ── Render theme grid
+// Render theme grid
 (function(){
   const w=document.getElementById('theme-grid');
-  themes.forEach(th=>{
-    w.innerHTML+=`<div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg);border-radius:8px;border-left:3px solid ${th.color}">
-      <span style="font-size:16px;flex-shrink:0">${th.icon}</span>
-      <div style="flex:1"><div style="font-weight:700;font-size:13px">${th.label}</div><div style="font-size:11px;color:var(--gray);line-height:1.4;margin-top:2px">${th.headline}</div></div>
-      <span style="font-size:11px;font-weight:800;color:${th.color};flex-shrink:0">${th.pct}%</span>
-    </div>`;
-  });
+  themes.forEach(th=>{w.innerHTML+=`<div style="display:flex;gap:10px;align-items:flex-start;padding:10px 12px;background:var(--bg);border-radius:8px;border-left:3px solid ${th.color}"><span style="font-size:16px;flex-shrink:0">${th.icon}</span><div style="flex:1"><div style="font-weight:700;font-size:13px">${th.label}</div><div style="font-size:11px;color:var(--gray);line-height:1.4;margin-top:2px">${th.headline}</div></div><span style="font-size:11px;font-weight:800;color:${th.color};flex-shrink:0">${th.pct}%</span></div>`;});
 })();
 
-// ── Render theme pills + cards
+// Render theme pills + cards
 (function(){
-  const pills=document.getElementById('theme-pills');
-  const cards=document.getElementById('theme-cards');
+  const pills=document.getElementById('theme-pills'),cards=document.getElementById('theme-cards');
   let active=null;
   themes.forEach(th=>{
     const btn=document.createElement('button');
     btn.innerHTML=`${th.icon} ${th.label} <span style="opacity:.7;margin-left:4px">${th.pct}%</span>`;
     btn.style.cssText=`padding:6px 12px;border-radius:20px;border:2px solid ${th.color};cursor:pointer;font-size:12px;font-weight:700;background:#fff;color:${th.color}`;
+    btn.classList.add('th-pill');
     btn.onclick=()=>{
       active=active===th.id?null:th.id;
-      document.querySelectorAll('.th-card').forEach(c=>{
-        c.style.display=(!active||c.dataset.id===active)?'block':'none';
-      });
-      document.querySelectorAll('.th-pill').forEach((b,i)=>{
-        const t=themes[i];
-        b.style.background=active===t.id?t.color:'#fff';
-        b.style.color=active===t.id?'#fff':t.color;
-      });
+      document.querySelectorAll('.th-card').forEach(c=>{c.style.display=(!active||c.dataset.id===active)?'block':'none'});
+      document.querySelectorAll('.th-pill').forEach((b,i)=>{const t=themes[i];b.style.background=active===t.id?t.color:'#fff';b.style.color=active===t.id?'#fff':t.color});
     };
-    btn.classList.add('th-pill');
     pills.appendChild(btn);
-
     const proof=th.proof.map(p=>`<div class="proof-row"><span class="proof-co" style="background:${th.color}">${p.co}</span><span style="font-size:12px;color:var(--slate);line-height:1.5">${p.stat}</span></div>`).join('');
     const seg=th.segment?`<div style="background:rgba(161,0,255,.07);border-radius:6px;padding:7px 11px;margin-bottom:14px;font-size:12px;color:var(--purple-dk);font-weight:600">📌 ${th.segment}</div>`:'';
-    const d=document.createElement('div');
-    d.className='card th-card';d.dataset.id=th.id;
-    d.style.cssText='margin-bottom:14px;overflow:hidden;border-top:4px solid '+th.color;
-    d.innerHTML=`<div style="padding:12px 18px;border-bottom:1px solid var(--gray-lt);display:flex;justify-content:space-between;align-items:center">
-      <span style="font-weight:800;font-size:15px">${th.icon} ${th.label}</span>
-      <span class="tag" style="background:${th.color}20;color:${th.color}">${th.pct}% of companies</span>
-    </div>
-    <div style="padding:16px 18px">
-      <p style="margin:0 0 8px;font-size:14px;font-weight:700">${th.headline}</p>
-      <p style="margin:0 0 14px;font-size:13px;line-height:1.7;color:var(--slate)">${th.summary}</p>
-      ${seg}
-      <div class="sl">Proof Points from the Stage</div>
-      ${proof}
-    </div>`;
+    const d=document.createElement('div');d.className='card th-card';d.dataset.id=th.id;d.style.cssText='margin-bottom:14px;overflow:hidden;border-top:4px solid '+th.color;
+    d.innerHTML=`<div style="padding:12px 18px;border-bottom:1px solid var(--gray-lt);display:flex;justify-content:space-between;align-items:center"><span style="font-weight:800;font-size:15px">${th.icon} ${th.label}</span><span class="tag" style="background:${th.color}20;color:${th.color}">${th.pct}% of companies</span></div><div style="padding:16px 18px"><p style="margin:0 0 8px;font-size:14px;font-weight:700">${th.headline}</p><p style="margin:0 0 14px;font-size:13px;line-height:1.7;color:var(--slate)">${th.summary}</p>${seg}<div class="sl">Proof Points from the Stage</div>${proof}</div>`;
     cards.appendChild(d);
   });
 })();
 
-// ── Render segment cards
+// Render segments
 (function(){
   const w=document.getElementById('seg-cards');
   segments.forEach(s=>{
     const watches=s.watch.map(ww=>`<div class="watch-box"><div style="font-weight:700;font-size:12px;margin-bottom:3px">${ww.signal}</div><div style="font-size:11px;color:var(--gray);line-height:1.55">${ww.detail}</div></div>`).join('');
-    w.innerHTML+=`<div class="seg-card" style="border-left:5px solid ${s.color}">
-      <div style="padding:12px 20px;border-bottom:1px solid var(--gray-lt);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-        <div style="display:flex;align-items:center;gap:10px"><span style="font-size:22px">${s.icon}</span><span style="font-weight:900;font-size:16px">${s.seg}</span></div>
-        <span style="font-size:11px;color:${s.color};font-weight:600;font-style:italic">${s.cos}</span>
-      </div>
-      <div class="seg-grid">
-        <div>
-          <div style="margin-bottom:14px">
-            <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><span>📍</span><span style="font-size:10px;font-weight:800;color:${s.color};letter-spacing:1px">SITUATION</span></div>
-            <p style="margin:0;font-size:13px;color:var(--slate);line-height:1.65">${s.situation}</p>
-          </div>
-          <div style="background:${s.color}08;border-radius:8px;padding:12px 14px;border-left:3px solid ${s.color}">
-            <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><span>⚡</span><span style="font-size:10px;font-weight:800;color:${s.color};letter-spacing:1px">KEY TENSION</span></div>
-            <p style="margin:0;font-size:13px;color:#1A1A1A;line-height:1.65;font-style:italic;font-weight:500">"${s.tension}"</p>
-          </div>
-        </div>
-        <div>
-          <div style="display:flex;align-items:center;gap:6px;margin-bottom:10px"><span>🔭</span><span style="font-size:10px;font-weight:800;color:${s.color};letter-spacing:1px">WHAT TO WATCH</span></div>
-          ${watches}
-        </div>
-      </div>
-    </div>`;
+    w.innerHTML+=`<div class="seg-card" style="border-left:5px solid ${s.color}"><div style="padding:12px 20px;border-bottom:1px solid var(--gray-lt);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><div style="display:flex;align-items:center;gap:10px"><span style="font-size:22px">${s.icon}</span><span style="font-weight:900;font-size:16px">${s.seg}</span></div><span style="font-size:11px;color:${s.color};font-weight:600;font-style:italic">${s.cos}</span></div><div class="seg-grid"><div><div style="margin-bottom:14px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><span>📍</span><span style="font-size:10px;font-weight:800;color:${s.color};letter-spacing:1px">SITUATION</span></div><p style="margin:0;font-size:13px;color:var(--slate);line-height:1.65">${s.situation}</p></div><div style="background:${s.color}08;border-radius:8px;padding:12px 14px;border-left:3px solid ${s.color}"><div style="display:flex;align-items:center;gap:6px;margin-bottom:6px"><span>⚡</span><span style="font-size:10px;font-weight:800;color:${s.color};letter-spacing:1px">KEY TENSION</span></div><p style="margin:0;font-size:13px;color:#1A1A1A;line-height:1.65;font-style:italic;font-weight:500">"${s.tension}"</p></div></div><div><div style="display:flex;align-items:center;gap:6px;margin-bottom:10px"><span>🔭</span><span style="font-size:10px;font-weight:800;color:${s.color};letter-spacing:1px">WHAT TO WATCH</span></div>${watches}</div></div></div>`;
   });
 })();
 
-// ── Render problem cards
+// Render problems
 (function(){
   const w=document.getElementById('prob-cards');
   problems.forEach(p=>{
     const sigs=p.signals.map(s=>{const pts=s.split(':');return`<div class="proof-row"><span class="proof-co" style="background:#1A1A1A">${pts[0]}</span><span style="font-size:12px;color:var(--slate);line-height:1.5">${pts.slice(1).join(':').trim()}</span></div>`}).join('');
-    w.innerHTML+=`<div id="prob-card-${p.rank}" class="card" style="margin-bottom:14px;overflow:hidden;border-left:4px solid ${p.uc}">
-      <div style="padding:12px 18px;border-bottom:1px solid var(--gray-lt);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
-        <div style="display:flex;align-items:center;gap:10px">
-          <div style="background:${p.uc};color:#fff;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0">#${p.rank}</div>
-          <span style="font-size:18px">${p.icon}</span>
-          <span style="font-weight:800;font-size:14px">${p.title}</span>
-        </div>
-        <div style="display:flex;gap:7px">
-          <span class="tag" style="background:${p.uc};color:#fff">${p.urgency}</span>
-          <span class="tag" style="background:var(--bg);color:var(--gray)">⏱ ${p.window}</span>
-        </div>
-      </div>
-      <div style="padding:14px 18px">
-        <p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:var(--slate)">${p.summary}</p>
-        <div class="sl">Evidence from CAGNY 2026</div>
-        <div style="margin-bottom:12px">${sigs}</div>
-        <div style="background:rgba(161,0,255,.05);border-left:3px solid var(--purple);border-radius:0 6px 6px 0;padding:8px 12px">
-          <span style="font-size:10px;font-weight:800;color:var(--purple);letter-spacing:.5px">ACCENTURE ANGLE  </span>
-          <span style="font-size:12px;color:var(--slate)">${p.angle}</span>
-        </div>
-      </div>
-    </div>`;
+    w.innerHTML+=`<div id="prob-card-${p.rank}" class="card" style="margin-bottom:14px;overflow:hidden;border-left:4px solid ${p.uc}"><div style="padding:12px 18px;border-bottom:1px solid var(--gray-lt);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px"><div style="display:flex;align-items:center;gap:10px"><div style="background:${p.uc};color:#fff;border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px;flex-shrink:0">#${p.rank}</div><span style="font-size:18px">${p.icon}</span><span style="font-weight:800;font-size:14px">${p.title}</span></div><div style="display:flex;gap:7px"><span class="tag" style="background:${p.uc};color:#fff">${p.urgency}</span><span class="tag" style="background:var(--bg);color:var(--gray)">⏱ ${p.window}</span></div></div><div style="padding:14px 18px"><p style="margin:0 0 12px;font-size:13px;line-height:1.7;color:var(--slate)">${p.summary}</p><div class="sl">Evidence from CAGNY 2026</div><div style="margin-bottom:12px">${sigs}</div><div style="background:rgba(161,0,255,.05);border-left:3px solid var(--purple);border-radius:0 6px 6px 0;padding:8px 12px"><span style="font-size:10px;font-weight:800;color:var(--purple);letter-spacing:.5px">ACCENTURE ANGLE  </span><span style="font-size:12px;color:var(--slate)">${p.angle}</span></div></div></div>`;
   });
 })();
 
-// ── Render provocations
+// Render provocations
 (function(){
   const w=document.getElementById('prov-cards');
   let qNum=0;
   provocations.forEach(group=>{
     const hdr=document.createElement('div');hdr.style.marginBottom='24px';
-    hdr.innerHTML=`<div class="horizon-hdr" style="border-bottom:2px solid ${group.horizonColor}20">
-      <div style="width:12px;height:12px;border-radius:50%;background:${group.horizonColor};flex-shrink:0"></div>
-      <span style="font-size:12px;font-weight:900;color:${group.horizonColor};letter-spacing:.5px">${group.horizon}</span>
-      <span style="font-size:12px;color:var(--gray);margin-left:10px">— ${group.label}</span>
-    </div>`;
+    hdr.innerHTML=`<div class="horizon-hdr" style="border-bottom:2px solid ${group.horizonColor}20"><div style="width:12px;height:12px;border-radius:50%;background:${group.horizonColor};flex-shrink:0"></div><span style="font-size:12px;font-weight:900;color:${group.horizonColor};letter-spacing:.5px">${group.horizon}</span><span style="font-size:12px;color:var(--gray);margin-left:10px">— ${group.label}</span></div>`;
     group.items.forEach(p=>{
       qNum++;
       const tags=p.tags.map(t=>`<span class="tag" style="background:rgba(106,0,153,.1);color:var(--purple-dk)">${t}</span>`).join(' ');
       const flagged=p.flagged?`<span class="tag" style="background:rgba(61,139,55,.12);color:var(--green)">⚑ ${p.flagged}</span>`:'';
-      hdr.innerHTML+=`<div class="prov-card" style="border-left:4px solid ${group.horizonColor}">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px">
-          <div style="display:flex;align-items:center;gap:8px">
-            <div style="background:${group.horizonColor};color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;flex-shrink:0">Q${qNum}</div>
-            <span class="tag" style="background:${group.horizonColor}18;color:${group.horizonColor}">${p.tension}</span>
-          </div>
-          ${flagged}
-        </div>
-        <p style="margin:0 0 12px;font-size:14px;line-height:1.75;font-weight:600;color:#1A1A1A">${p.q}</p>
-        <div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div>
-      </div>`;
+      hdr.innerHTML+=`<div class="prov-card" style="border-left:4px solid ${group.horizonColor}"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px"><div style="display:flex;align-items:center;gap:8px"><div style="background:${group.horizonColor};color:#fff;border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;flex-shrink:0">Q${qNum}</div><span class="tag" style="background:${group.horizonColor}18;color:${group.horizonColor}">${p.tension}</span></div>${flagged}</div><p style="margin:0 0 12px;font-size:14px;line-height:1.75;font-weight:600;color:#1A1A1A">${p.q}</p><div style="display:flex;gap:6px;flex-wrap:wrap">${tags}</div></div>`;
     });
     w.appendChild(hdr);
   });
 })();
 
-// ── Render company map
+// Render company map
 (function(){
   const w=document.getElementById('co-map');
   const days=['Tue 17','Wed 18','Thu 19','Fri 20'];
   const dayNames=['TUESDAY FEB 17','WEDNESDAY FEB 18','THURSDAY FEB 19','FRIDAY FEB 20'];
   days.forEach((day,di)=>{
-    const cos=companies.filter(c=>c.day===day);
-    const cards=cos.map(co=>`<a href="${co.ir}" target="_blank" class="co-card">
-      <div style="font-weight:700;font-size:13px;color:#1A1A1A">${co.name}</div>
-      <div style="font-size:11px;color:var(--gray);margin-top:2px">${co.seg}</div>
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:3px">
-        <span style="font-size:10px;color:var(--purple);font-weight:700">${co.tk}</span>
-        <span style="font-size:9px;color:var(--purple-md)">IR →</span>
-      </div>
-    </a>`).join('');
-    w.innerHTML+=`<div style="margin-bottom:18px">
-      <div style="font-weight:800;font-size:12px;color:var(--purple);letter-spacing:1px;margin-bottom:8px;border-bottom:2px solid var(--purple-lt);padding-bottom:6px">${dayNames[di]}</div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px">${cards}</div>
-    </div>`;
+    const cards=companies.filter(c=>c.day===day).map(co=>`<a href="${co.ir}" target="_blank" class="co-card"><div style="font-weight:700;font-size:13px;color:#1A1A1A">${co.name}</div><div style="font-size:11px;color:var(--gray);margin-top:2px">${co.seg}</div><div style="display:flex;justify-content:space-between;align-items:center;margin-top:3px"><span style="font-size:10px;color:var(--purple);font-weight:700">${co.tk}</span><span style="font-size:9px;color:var(--purple-md)">IR →</span></div></a>`).join('');
+    w.innerHTML+=`<div style="margin-bottom:18px"><div style="font-weight:800;font-size:12px;color:var(--purple);letter-spacing:1px;margin-bottom:8px;border-bottom:2px solid var(--purple-lt);padding-bottom:6px">${dayNames[di]}</div><div style="display:flex;flex-wrap:wrap;gap:8px">${cards}</div></div>`;
   });
 })();
 
-// ── Render fun facts
+// Render fun facts
 (function(){
   const w=document.getElementById('fact-cards');
   funFacts.forEach(f=>{
-    const div=document.createElement('div');
-    div.className='fact-card';
-    div.style.borderTop=`4px solid ${f.color}`;
+    const div=document.createElement('div');div.className='fact-card';div.style.borderTop=`4px solid ${f.color}`;
     let flipped=false;
-    const showFront=()=>{div.innerHTML=`<div style="background:#fff;padding:18px;min-height:210px">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-        <div style="display:flex;align-items:center;gap:8px"><span style="font-size:26px">${f.emoji}</span><span class="tag" style="background:${f.color}18;color:${f.color}">${f.tag}</span></div>
-        <div style="background:#1A1A1A;color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:11px;flex-shrink:0">#${f.rank}</div>
-      </div>
-      <div style="font-weight:800;font-size:14px;margin-bottom:8px;line-height:1.3">${f.title}</div>
-      <div style="font-size:12px;color:var(--slate);line-height:1.6;margin-bottom:10px">${f.fact}</div>
-      <div style="display:flex;justify-content:space-between;align-items:center">
-        <span style="font-size:10px;color:var(--gray)">📍 ${f.co}</span>
-        <span style="font-size:11px;color:${f.color};font-weight:700">Click to provoke →</span>
-      </div>
-    </div>`};
-    const showBack=()=>{div.innerHTML=`<div style="background:${f.color};padding:18px;min-height:210px;display:flex;flex-direction:column;justify-content:center">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-        <span style="font-size:22px">${f.emoji}</span>
-        <span class="tag" style="background:rgba(255,255,255,.25);color:#fff">#${f.rank} · PROVOCATION</span>
-      </div>
-      <div style="font-weight:800;font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px;line-height:1.4">${f.title}</div>
-      <div style="font-size:14px;color:#fff;line-height:1.75;font-style:italic;font-weight:500">"${f.prov}"</div>
-      <div style="margin-top:14px;font-size:11px;color:rgba(255,255,255,.5);font-weight:600">Click to flip back</div>
-    </div>`};
+    const showFront=()=>{div.innerHTML=`<div style="background:#fff;padding:18px;min-height:210px"><div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:26px">${f.emoji}</span><span class="tag" style="background:${f.color}18;color:${f.color}">${f.tag}</span></div><div style="background:#1A1A1A;color:#fff;border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:11px;flex-shrink:0">#${f.rank}</div></div><div style="font-weight:800;font-size:14px;margin-bottom:8px;line-height:1.3">${f.title}</div><div style="font-size:12px;color:var(--slate);line-height:1.6;margin-bottom:10px">${f.fact}</div><div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:10px;color:var(--gray)">📍 ${f.co}</span><span style="font-size:11px;color:${f.color};font-weight:700">Click to provoke →</span></div></div>`};
+    const showBack=()=>{div.innerHTML=`<div style="background:${f.color};padding:18px;min-height:210px;display:flex;flex-direction:column;justify-content:center"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><span style="font-size:22px">${f.emoji}</span><span class="tag" style="background:rgba(255,255,255,.25);color:#fff">#${f.rank} · PROVOCATION</span></div><div style="font-weight:800;font-size:12px;color:rgba(255,255,255,.75);margin-bottom:12px;line-height:1.4">${f.title}</div><div style="font-size:14px;color:#fff;line-height:1.75;font-style:italic;font-weight:500">"${f.prov}"</div><div style="margin-top:14px;font-size:11px;color:rgba(255,255,255,.5);font-weight:600">Click to flip back</div></div>`};
     showFront();
     div.addEventListener('click',()=>{flipped=!flipped;flipped?showBack():showFront()});
     w.appendChild(div);
